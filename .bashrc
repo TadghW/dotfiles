@@ -1,0 +1,19 @@
+#
+# ~/.bashrc
+#
+
+# Return here if not running in an interactive session
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+export PATH=$HOME/.local/bin:$PATH
+
+# Return here if tmux not installed
+command -v tmux >/dev/null 2>&1 || return
+
+# If interactive session, connected to PTY, and not in yet tmux create new tmux session
+if [[ -z "$TMUX" && -t 0 && -t 1 ]]; then
+  exec tmux new-session -s "term-$(date +%Y%m%d-%H%M%S)-$$"
+fi
