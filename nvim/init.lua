@@ -21,6 +21,8 @@ vim.opt.confirm = true
 
 require("config.lazy")
 require("config.colors")
+require("plugins.telescope")
+require("plugins.neotree")
 
 vim.keymap.set("n", "<leader>ff", function() require("telescope.builtin").find_files() end, { desc = "Find files" })
 vim.keymap.set("n", "<leader>fg", function() require("telescope.builtin").live_grep()  end, { desc = "Live grep" })
