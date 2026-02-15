@@ -10,12 +10,12 @@ return {
   keys = {
     { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Show/Hide Neo-tree (Filesystem)" },    
     { "<leader>b", "<cmd>Neotree toggle buffers<cr>", desc = "Show/Hide Neo-tree (Buffers)" },
-    { "<leader>g", "<cmd>Neotree toggle git_status<cr>", desc= "Show/Hide Neo-tree (Git)"}
+    { "<leader>git", "<cmd>Neotree toggle git_status<cr>", desc= "Show/Hide Neo-tree (Git)"}
   },
   
   config = function()
 
-    vim.opt.hidden = false
+    vim.opt.hidden = true
     vim.opt.switchbuf = { "useopen" }
 
     require("neo-tree").setup({

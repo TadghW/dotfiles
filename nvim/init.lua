@@ -1,10 +1,14 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+vim.g.loaded_netrw = 1
+vim.g.loaded_netwrPlugin = 1
 
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.number = true
 vim.opt.relativenumber = false
+ -- vim.opt.cursorline = true
+ -- vim.opt.cursorcolumn = true
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
