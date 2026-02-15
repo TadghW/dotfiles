@@ -8,8 +8,9 @@ return {
   },
   cmd = "Neotree",
   keys = {
-    { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Neo-tree toggle" },
-    { "<leader>b", "<cmd>Neotree toggle buffers<cr>", desc = "Neo-tree buffers" },
+    { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Show/Hide Neo-tree (Filesystem)" },    
+    { "<leader>b", "<cmd>Neotree toggle buffers<cr>", desc = "Show/Hide Neo-tree (Buffers)" },
+    { "<leader>g", "<cmd>Neotree toggle git_status<cr>", desc= "Show/Hide Neo-tree (Git)"}
   },
   
   config = function()
@@ -34,7 +35,7 @@ return {
       },
 
       window = { 
-        position = "left", 
+        position = "right", 
         width = 32 
       },
 

@@ -21,6 +21,7 @@ vim.opt.confirm = true
 
 require("config.lazy")
 require("config.colors")
+require("config.keymaps")
 require("plugins.telescope")
 require("plugins.neotree")
 
