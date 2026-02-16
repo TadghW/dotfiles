@@ -27,6 +27,7 @@ _As a workaround to get me going with nvim I'm using neovim's tab system and :tc
 
 ##### To do & Fixes:
 
+ - neotree symbols are currently all question marks, should fix that
  - nvim eats modifiers so moving between panes in tmux now sucks (prefix + h,j,k,l), I should figure out how other people solve this - ideally landing on a caps or control modifier 
  - I should look for a better way to name tmux tabs (nvim report directories?)
  - I should get into the habit of opening nvim in different tabs based rather than multiple tabs in nvim
