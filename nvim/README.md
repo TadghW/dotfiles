@@ -3,13 +3,15 @@
 #### Currently installed:
 
  - LazyVim (Plugin Manager)
- - AlphaVim (Greeter)
+ - AlphaVim (Greeter) -- Kinda redundant? Cool, but I never really see it. Just keeping around in case the workflow I land on benefits from it
  - NeoTree (Buffer and Filesystem Tree)
  - Telescope (Fuzzy find files and strings)
+ - Nerd Fonts (Install a font with devicons and set it as terminal default - nerd-fonts has a good selection - I'm using JetBrainsMono; Firacode and Roboto Mono are also nice.)
+ - Catppuccin 
 
 ##### To use:
  
- MODES:
+ MODES:     
  - i for insert mode to the left
  - a for insert mode to the right
  - v for visual mode
@@ -53,9 +55,6 @@ _As a workaround to get me going with nvim I'm using neovim's tab system and :tc
 ##### To do & Fixes:
 
  - why do deletes go to clipboard? if there's no good reason to learn I'd like to delete it
- - I feel as though the font could be more readable (what are the meta fonts? Roboto mono, IBM Plex Mono, Cousine, Azeret Mono all nice)
- - neotree symbols are currently all question marks, should fix that (icon pack?)
- - might be worth experimenting with more colour schemes (this one's just ok, legible but heavy)
  - I should install and try nvimbegood
  - nvim eats modifiers so moving between panes in tmux now sucks (prefix + h,j,k,l), I should figure out how to better integrate my environments - ideally with unified schemes per env that don't clash 
  - I should look for a better way to name tmux tabs (nvim report directories?)

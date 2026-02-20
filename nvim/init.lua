@@ -1,34 +1,10 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netwrPlugin = 1
 
-vim.opt.clipboard = "unnamedplus"
-
-vim.opt.number = true
-vim.opt.relativenumber = false
- -- vim.opt.cursorline = true
- -- vim.opt.cursorcolumn = true
-
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.smartindent = true
-
-vim.opt.ignorecase = true
-vim.opt.incsearch = true
-vim.opt.hlsearch = true
-
-vim.opt.termguicolors = true
-
-vim.opt.confirm = true
-
-require("config.lazy")
-require("config.colors")
 require("config.keymaps")
-require("plugins.telescope")
-require("plugins.neotree")
-require("plugins.alpha-nvim")
+require("config.options")
+require("config.colors")
+require("config.lazy")
 
 vim.keymap.set("n", "<leader>ff", function() require("telescope.builtin").find_files() end, { desc = "Find files" })
 vim.keymap.set("n", "<leader>fg", function() require("telescope.builtin").live_grep()  end, { desc = "Live grep" })
