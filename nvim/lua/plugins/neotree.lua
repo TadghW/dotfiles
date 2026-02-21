@@ -22,6 +22,12 @@ return {
 
       close_if_last_window = true,
       enable_git_status = true,
+      commands = {
+        open_keep_focus = function(state)
+          require("neo-tree.sources.common.commands").open(state)
+          vim.cmd("wincmd p")
+        end,
+      },
  
       sources = { 
         "filesystem",
@@ -54,6 +60,11 @@ return {
         },
         follow_current_file = {
           enabled = true
+        },
+        window = {
+          mappings = {
+            ["<cr>"] = { "open_keep_focus", nowait = false },
+          },
         },
         use_libuv_file_watcher = true,
       }
