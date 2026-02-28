@@ -5,6 +5,7 @@
        config = function()
          require("catppuccin").setup({
            flavour = "mocha",
+           auto_integrations = true,
            background = { light = "latte", dark = "mocha" },
            transparent_background = false,
            float = { transparent = false, solid = false },
@@ -39,6 +40,7 @@
              cmp = true,
              gitsigns = true,
              nvimtree = true,
+             lualine = {},
              notify = false,
              mini = { enabled = true, indentscope_color = "" },
            },
