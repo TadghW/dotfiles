@@ -22,10 +22,12 @@ return {
 }
         dashboard.section.header.val = b0
         dashboard.section.buttons.val = {
-            dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-            dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
-            dashboard.button("r", "  Recent files", ":Telescope oldfiles<CR>"),
-            dashboard.button("q", "  Quit", ":qa<CR>"),
+            dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
+            dashboard.button("g", "  Find string", ":Telecscope find_grep<CR>"),
+            dashboard.button("f", "󰪶  Find file", ":Telescope find_files<CR>"),
+            dashboard.button("e", "  Explore directory", ":Neotree position=float dir=. <CR>"),
+            dashboard.button("r", "  Recent files", ":Telescope oldfiles<CR>"),
+            dashboard.button("q", "  Quit", ":qa<CR>"),
         }
         alpha.setup(dashboard.opts)
     end,
