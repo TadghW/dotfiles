@@ -8,6 +8,7 @@
  - Telescope (Fuzzy find files and strings)
  - Nerd Fonts (Install a font with devicons and set it as terminal default - nerd-fonts has a good selection - I'm using JetBrainsMono; Firacode and Roboto Mono are also nice.)
  - Catppuccin 
+ - Lualine
 
 ##### To use:
  
@@ -54,9 +55,11 @@ _As a workaround to get me going with nvim I'm using neovim's tab system and :tc
 
 ##### To do & Fixes:
 
- - why do deletes go to clipboard? if there's no good reason to learn I'd like to delete it
+ - There's some weird hacky stuff going on to try and insure autoreload, and I'm not sure it's working. Maybe I should try a plugin?
+ - I don't have a great grasp of navigation, I should expand the keybind set and try and unify tmux and nvim navigation nicely
+ - By default deletes go to clipboard - if there's no good reason to learn I'd like to change that
+ - There's some hacky stuff that hides lualine, popping up the command box when I input a command. This kind of seems like it works, but I might check how other people get status lines at the bottom of their screens. 
  - I should install and try nvimbegood
- - nvim eats modifiers so moving between panes in tmux now sucks (prefix + h,j,k,l), I should figure out how to better integrate my environments - ideally with unified schemes per env that don't clash 
  - I should look for a better way to name tmux tabs (nvim report directories?)
  - I should get into the habit of opening nvim in different tabs based rather than multiple tabs in nvim
  - I need to figure out how to loop nvim into LSPs

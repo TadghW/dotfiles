@@ -15,6 +15,10 @@ vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
 vim.opt.termguicolors = true
+vim.opt.cmdheight = 0
+vim.opt.showmode = false
+vim.opt.showcmd = true
+vim.opt.showcmdloc = "statusline"
 
 vim.opt.confirm = true
 
