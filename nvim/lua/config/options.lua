@@ -22,14 +22,6 @@ vim.opt.showcmdloc = "statusline"
 
 vim.opt.confirm = true
 
-vim.opt.autoread = true
-
-local autoread_group = vim.api.nvim_create_augroup("AutoRead", { clear = true })
-vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
-  group = autoread_group,
-  pattern = "*",
-  command = "checktime",
-})
-
 require("config.lazy")
 require("config.colors")
+require("aider.file_watcher")
