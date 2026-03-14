@@ -10,6 +10,10 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 export PATH=$HOME/.local/bin:$PATH
 
+# Unicorn, catppuccin, cobalt2, dracula, gruvbox, rudolfs-dark, tokyonight_storm
+
+eval "$(oh-my-posh init bash --config 'cobalt2')"
+
 # Return here if tmux not installed
 command -v tmux >/dev/null 2>&1 || return
 
@@ -18,6 +22,3 @@ if [[ -z "$TMUX" && -t 0 && -t 1 ]]; then
   exec tmux new-session -s "term-$(date +%Y%m%d-%H%M%S)-$$"
 fi
 
-# Unicorn, catppuccin, cobalt2, dracula, gruvbox, rudolfs-dark, tokyonight_storm
-
-eval "$(oh-my-posh init bash --config 'cobalt2')"
