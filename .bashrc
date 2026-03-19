@@ -11,5 +11,4 @@ alias workspace='TERM=xterm-256color COLORTERM=truecolor ssh tadgh@192.168.0.6 -
 PS1='[\u@\h \W]\$ '
 export PATH=$HOME/.local/bin:$PATH
 
-# Unicorn, catppuccin, cobalt2, dracula, gruvbox, rudolfs-dark, tokyonight_storm
-eval "$(oh-my-posh init bash --config 'cobalt2')"
+eval "$(oh-my-posh init bash --config 'catppuccin_mocha')"
