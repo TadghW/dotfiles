@@ -6,7 +6,7 @@
          require("catppuccin").setup({
            flavour = "mocha",
            auto_integrations = true,
-           background = { light = "latte", dark = "mocha" },
+           background = { light = "frappe", dark = "mocha" },
            transparent_background = false,
            float = { transparent = false, solid = false },
            show_end_of_buffer = false,

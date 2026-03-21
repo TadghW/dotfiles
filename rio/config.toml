@@ -20,7 +20,7 @@
 # (windows: C:\Users\USER\AppData\Local\rio\themes\dracula.toml)
 #
 # Example:
-theme = "catppuccin-macchiato"
+theme = "catppuccin-mocha"
 
 # Reload config changes while Rio is running.
 live-config-reload = true
