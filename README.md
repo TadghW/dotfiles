@@ -16,7 +16,11 @@ Contains all of the configuration files I use to configure my compters' terminal
 
 ## To Use
 
-Clone the repo and run `deploy-config.sh`! `deploy-config.sh` runs `stash-config.sh` which copies out any existing config you have to new files / folders, then runs `symlink-config.sh` which creates symlinks in your home and .config folders to your local copy of this repo. 
+Clone the repo and run `deploy-config.sh`! `deploy-config.sh` runs `stash-config.sh` which copies out any existing config you have to new files / folders, then runs `symlink-config.sh` which creates symlinks in your home and .config folders to your local copy of this repo. The boring, copy-only version of this is provided by `copy-config.sh`. Both scripts will run a clone the catppuccin tmux theme with:
+
+`git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux`
+
+If you don't want to keep your old config around, run `remove-stashed-configs.sh` for cleanup
 
 If you want to update anything work in your copy of the repo, the changes will be reloaded automatically when the apps are! (Except for Rio, which will auto-reload most config because it's cool like that) (Tmux will reload most config if you hit Ctrl A + R) 
 
