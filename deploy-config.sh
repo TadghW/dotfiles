@@ -8,7 +8,7 @@ chmod +x ./symlink-config.sh
 ./symlink-config.sh
 
 hasZsh=$(zsh -v)
-if [[ $? -ne 0 ]];
+if [[ $? -ne 0 ]]; then
   echo "Shell configuration is only included for zsh - your shell will remain unconfigured by this script"
 fi
 
