@@ -4,15 +4,15 @@
 
 Contains all of the configuration files I use to configure my compters' terminal emulators and TUI apps, including:
 
- - My `.bashrc` for shell configuration
- - My `.bash_profile` for sourcing the shell configuration when logging in over SSH
+ - My `.zshenv` for correctly sourcing my `zsh` config
  - My `.gitconfig` for configuring git
+ - Configuration for the `zsh` shell
  - Configuration folders for `alacritty` and `rio`
  - Configuration for the `tmux` terminal multiplexer
  - Configuration for the `neovim` text editor
  - Helper scripts for installing the configuration
 
- When I'm working in a new unix-like environment I install `git`, `tmux`, `neovim`, and `rio` - then clone this repo and run `deploy-config.sh` - which deploys my configuration
+ When I'm working in a new unix-like environment I install `zsh`, `git`, `tmux`, `neovim`, and `rio` - then clone this repo and run `deploy-config.sh` - which deploys my configuration
 
 ## To Use
 
