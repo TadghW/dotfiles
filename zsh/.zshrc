@@ -22,14 +22,14 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr ' %F{green}+%f'
 zstyle ':vcs_info:git:*' unstagedstr ' %F{red}*%f'
-zstyle ':vcs_info:git:*' formats ' %F{green} %b%f%c%u'
-zstyle ':vcs_info:git:*' actionformats ' %F{green} %b %F{yellow}[%a]%f%c%u'
+zstyle ':vcs_info:git:*' formats ' %F{yellow} %b%f%c%u'
+zstyle ':vcs_info:git:*' actionformats ' %F{yellow} %b %F{yellow}[%a]%f%c%u'
 
 precmd() {
   vcs_info
 }
 
-PROMPT='%F{white}%n@%m%f %F{blue}%~%f${vcs_info_msg_0_} -> '
+PROMPT='%F{white}%n@%m%f %F{blue}%~%f${vcs_info_msg_0_} => '
 
 if [[ ! -d ~/.config/zsh/plugins/zsh-syntax-highlighting ]]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.config/zsh/plugins/zsh-syntax-highlighting

@@ -23,10 +23,9 @@ backup_if_exists(){
   return 0
 }
 
-backup_if_exists ~/.bashrc
-backup_if_exists ~/.bash_profile
+backup_if_exists ~/.zshenv
 backup_if_exists ~/.gitconfig
-backup_if_exists ~/.config/alacritty
+backup_if_exists ~/.config/zsh
 backup_if_exists ~/.config/rio
 backup_if_exists ~/.config/tmux
 backup_if_exists ~/.config/nvim
