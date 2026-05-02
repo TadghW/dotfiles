@@ -29,7 +29,7 @@ precmd() {
   vcs_info
 }
 
-PROMPT='%F{white}%n@%m%f %F{blue}%~%f${vcs_info_msg_0_} => '
+PROMPT='%F{white}%n@%m%f %F{blue}%~%f${vcs_info_msg_0_} 󰴂 '
 
 if [[ ! -d ~/.config/zsh/plugins/zsh-syntax-highlighting ]]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.config/zsh/plugins/zsh-syntax-highlighting
