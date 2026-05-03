@@ -41,3 +41,7 @@ fi
 
 source ~/.config/zsh/plugins/zsh-sage/zsh-sage.plugin.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias connect-to-depths="ssh tadgh@192.168.0.2"
+alias notes="cd ~/notes && nvim"
+
