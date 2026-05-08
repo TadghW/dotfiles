@@ -15,21 +15,24 @@ compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+plugins=(git)
 autoload -Uz vcs_info
 autoload -Uz colors && colors
 
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr ' %F{green}+%f'
-zstyle ':vcs_info:git:*' unstagedstr ' %F{red}*%f'
-zstyle ':vcs_info:git:*' formats ' %F{yellow} %b%f%c%u'
-zstyle ':vcs_info:git:*' actionformats ' %F{yellow} %b %F{yellow}[%a]%f%c%u'
+zstyle ':vcs_info:git:*' stagedstr ' %F{green}+%f '
+zstyle ':vcs_info:git:*' unstagedstr ' %F{red}*%f '
+zstyle ':vcs_info:git:*' formats ' %F{red} %b%f%c%u '
+zstyle ':vcs_info:git:*' actionformats ' %F{red} %b %F{yellow}[%a]%f%c%u '
 
 precmd() {
   vcs_info
 }
 
-PROMPT='%F{white}%n@%m%f %F{blue}%~%f${vcs_info_msg_0_} 󰴂 '
+PROMPT='%F{green}%n@%m%f %B%F{blue}%~%f${vcs_info_msg_0_}%b> '
+
+export COLORTERM=truecolor
 
 if [[ ! -d ~/.config/zsh/plugins/zsh-syntax-highlighting ]]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.config/zsh/plugins/zsh-syntax-highlighting
@@ -41,7 +44,3 @@ fi
 
 source ~/.config/zsh/plugins/zsh-sage/zsh-sage.plugin.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-alias connect-to-depths="ssh tadgh@192.168.0.2"
-alias notes="cd ~/notes && nvim"
-
