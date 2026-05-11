@@ -21,16 +21,16 @@ autoload -Uz colors && colors
 
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr ' %F{green}+%f '
-zstyle ':vcs_info:git:*' unstagedstr ' %F{red}*%f '
-zstyle ':vcs_info:git:*' formats ' %F{red} %b%f%c%u '
-zstyle ':vcs_info:git:*' actionformats ' %F{red} %b %F{yellow}[%a]%f%c%u '
+zstyle ':vcs_info:git:*' stagedstr ' %f{green}+%f'
+zstyle ':vcs_info:git:*' unstagedstr ' %f{red}*%f'
+zstyle ':vcs_info:git:*' formats ' on %b%f{red}%b%f%c%u'
+zstyle ':vcs_info:git:*' actionformats ' on %b%f{red}%b %f{yellow}[%a]%f%c%u'
 
 precmd() {
   vcs_info
 }
 
-PROMPT='%F{green}%n@%m%f %B%F{blue}%~%f${vcs_info_msg_0_}%b> '
+prompt='%b%f{green}%n@%m%f%b in %b%f{blue}%~%f%b${vcs_info_msg_0_} > '
 
 export COLORTERM=truecolor
 
