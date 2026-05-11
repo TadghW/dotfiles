@@ -41,8 +41,8 @@ return {
       },
 
       window = { 
-        position = "right", 
-        width = 32 
+        position = "left", 
+        width = 42 
       },
 
       buffers = {
