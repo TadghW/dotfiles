@@ -22,7 +22,7 @@ autoload -Uz colors && colors
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr ' %f{green}+%f'
-zstyle ':vcs_info:git:*' unstagedstr ' %f{red}*%f'
+zstyle ':vcs_info:git:*' unstagedstr ' %f{yellow}*%f'
 zstyle ':vcs_info:git:*' formats ' on %b%f{red}%b%f%c%u'
 zstyle ':vcs_info:git:*' actionformats ' on %b%f{red}%b %f{yellow}[%a]%f%c%u'
 
