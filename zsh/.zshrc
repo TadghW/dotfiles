@@ -23,14 +23,14 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr ' %F{green}+%f'
 zstyle ':vcs_info:git:*' unstagedstr ' %F{yellow}*%f'
-zstyle ':vcs_info:git:*' formats ' on %B%F{red}%b%f%c%u'
+zstyle ':vcs_info:git:*' formats ' %B%F{white}(%f%F{red}%b%c%u%F{white})%f'
 zstyle ':vcs_info:git:*' actionformats '%B%F{red}%b %F{yellow}[%a]%f%c%u'
 
 precmd() {
   vcs_info
 }
 
-PROMPT='%F{green}%n@%m%f > in %B%F{blue}%~%f%b${vcs_info_msg_0_}%f%b > '
+PROMPT='%F{green}%n@%m%f > %B%F{blue}%~%f%b${vcs_info_msg_0_}%f%b > '
 
 export COLORTERM=truecolor
 
@@ -44,3 +44,6 @@ fi
 
 source ~/.config/zsh/plugins/zsh-sage/zsh-sage.plugin.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias reload-shell="source ~/.config/zsh/.zshrc"
+alias modify-shell="nvim ~/.config/zsh/.zshrc"
