@@ -30,7 +30,7 @@ live-config-reload = true
 # define x axis padding (default is 0)
 #
 # Example:
-# padding-x = 10
+padding-x = 5
 
 # Padding-y
 #
