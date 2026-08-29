@@ -32,6 +32,7 @@ return {
         -- Bulk preinstall: a broad, sane default set.
         ensure_installed = {
           "bashls",
+          "clangd",
           "cssls",
           "dockerls",
           "gopls",

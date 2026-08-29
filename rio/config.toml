@@ -205,6 +205,16 @@ confirm-before-quit = false
 [fonts]
 family = "JetBrainsMono Nerd Font Mono"
 size = 13
+# Rio 0.4.5's built-in Braille renderer (use-drawable-chars) draws missing-glyph
+# boxes instead of Braille patterns. Disable it so Braille goes through the font,
+# and map the Braille block (U+2800-U+28FF) to Noto Sans Symbols 2, which renders
+# only RAISED dots (unraised positions blank) -- needed for braille-as-pixels art.
+# JetBrainsMono Nerd Font has no Braille at all; FreeMono draws hollow unraised
+# dots, which breaks the art. Fixes the alpha-nvim dashboard.
+use-drawable-chars = false
+symbol-map = [
+  { start = "2800", end = "28FF", font-family = "Noto Sans Symbols 2" }
+]
 #
 # You can also specify extra fonts to load
 # [fonts]
