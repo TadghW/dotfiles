@@ -9,6 +9,29 @@
  - Nerd Fonts (Install a font with devicons and set it as terminal default - nerd-fonts has a good selection - I'm using JetBrainsMono; Firacode and Roboto Mono are also nice.)
  - Catppuccin 
  - Lualine
+ - render-markdown.nvim (draws markdown in the buffer instead of just highlighting it)
+ - snacks.nvim (only the `zen` and `dim` modules are switched on)
+
+##### Prose mode (.md and .txt):
+
+_Opening a `.md` or `.txt` file switches into a writing setup: soft wrap at word boundaries, no line numbers or sign column, British-English spell check, softened prose colours, and markdown rendered in place. Zen mode opens automatically and centres the text in an 84-column window._
+
+ - Leader + z toggles Zen mode by hand
+ - Leader + Z zooms the current window to fullscreen (no centring)
+ - Leader + mz turns auto-Zen on/off for the rest of the session
+ - Leader + mr toggles markdown rendering for this buffer (to see the raw text)
+ - Leader + ms toggles spell check for this window
+ - Leader + mq reflows the current paragraph to 80 columns
+ - Leader + ud toggles dimming (fades every paragraph except the one you're in)
+ - j / k move by screen line rather than file line, since lines now wrap
+ - zg adds a word to the dictionary; it saves to `nvim/spell/en.utf-8.add` in this repo
+ - z= suggests corrections for the word under the cursor
+
+_Nothing is hard-wrapped as you type. `textwidth` is 80 but `formatoptions` has no `t`, so lines are only broken when you ask with `gq`/`gw`._
+
+_Note on line height: Neovim cannot set line spacing in a terminal — that's a terminal setting. `line-height` in `rio/config.toml` is the only lever, and it applies to every Rio window, not just prose._
+
+ The implementation is in `lua/config/prose.lua`, triggered by `after/ftplugin/markdown.lua` and `after/ftplugin/text.lua`.
 
 ##### To use:
  
