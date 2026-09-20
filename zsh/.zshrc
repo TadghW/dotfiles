@@ -24,13 +24,13 @@ zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr ' %F{green}+%f'
 zstyle ':vcs_info:git:*' unstagedstr ' %F{yellow}*%f'
 zstyle ':vcs_info:git:*' formats ' %B%F{white}(%f%F{red}%b%c%u%F{white})%f'
-zstyle ':vcs_info:git:*' actionformats '%B%F{red}%b %F{yellow}[%a]%f%c%u'
+zstyle ':vcs_info:git:*' actionformats ' %B%F{white}(%f%F{red}%b%c%u %F{yellow}[%a]%f%F{white})%f'
 
 precmd() {
   vcs_info
 }
 
-PROMPT='%F{green}%n@%m%f > %B%F{blue}%~%f%b${vcs_info_msg_0_}%f%b > '
+PROMPT='%F{magenta}%D{%H:%M}%f > %F{green}%n@%m%f > %B%F{blue}%~%f%b${vcs_info_msg_0_}%f%b > '
 
 export COLORTERM=truecolor
 
