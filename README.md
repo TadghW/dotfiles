@@ -2,7 +2,7 @@
 
 ## This project
 
-Contains all of the configuration files I use to configure my compters' terminal emulators and TUI apps, including:
+Contains all of the configuration files I use to configure my computers' terminal emulators and TUI apps, including:
 
  - My `.zshenv` for correctly sourcing my `zsh` config
  - My `.gitconfig` for configuring git
@@ -10,17 +10,17 @@ Contains all of the configuration files I use to configure my compters' terminal
  - Configuration folders for `alacritty` and `rio`
  - Configuration for the `tmux` terminal multiplexer
  - Configuration for the `neovim` text editor
- - Helper scripts for installing the configuration
+ - Scripts for deploying and removing the configuration
 
  When I'm working in a new unix-like environment I install `zsh`, `git`, `tmux`, `neovim`, and `rio` - then clone this repo and run `deploy-config.sh` - which deploys my configuration
 
 ## To Use
 
-Clone the repo and run `deploy-config.sh`! `deploy-config.sh` runs `stash-config.sh` which copies out any existing config you have to new files / folders, then runs `symlink-config.sh` which creates symlinks in your home and .config folders to your local copy of this repo. The boring, copy-only version of this is provided by `copy-config.sh`. Both scripts will run a clone the catppuccin tmux theme with:
+Clone the repo and run `deploy-config.sh`! It stashes any existing config into `~/.config/old-config`, timestamped, then symlinks your home and .config folders to your local copy of this repo. Anything you haven't installed gets skipped. It'll also clone the catppuccin tmux theme with:
 
 `git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux`
 
-If you don't want to keep your old config around, run `remove-stashed-configs.sh` for cleanup
+To rip the deployed config back out, run `remove-config.sh`. It leaves `~/.config/old-config` alone - delete that yourself once you're happy
 
 If you want to update anything work in your copy of the repo, the changes will be reloaded automatically when the apps are! (Except for Rio, which will auto-reload most config because it's cool like that) (Tmux will reload most config if you hit Ctrl A + R) 
 
@@ -30,7 +30,7 @@ You will want to customise `.gitconfig` - it has my name, email, and merge prefe
 
 - I recommend using [Rio](https://rioterm.com/) as your terminal emulator - it's very cross-platform and easy to configure. You can see my Rio config in `dotfiles/rio/`.
 - Remember to find and apply a theme to your terminal emulator for maximum eye-comfort :)
-- You'll be launched automatically into a `tmux` session when you log in. This behaviour is configured in `dotfiles/.bashrc-auto-tmux`, which is renamed to `.bashrc` on installation, and sourced by `.bash_profile` when you log in to the container. To use my `tmux` config:
+- To use my `tmux` config:
   1. Prefix is `Ctrl + A`
   2. `Prefix + -` for vertical split `Prefix + |` for horizontal.
   3. `Prefix + Arrow keys` to resize a pane
