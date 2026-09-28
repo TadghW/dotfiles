@@ -59,5 +59,7 @@ fi
 
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
 alias reload-shell="source ~/.config/zsh/.zshrc"
 alias modify-shell="nvim ~/.config/zsh/.zshrc"
