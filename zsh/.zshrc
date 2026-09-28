@@ -43,6 +43,20 @@ if [[ ! -d ~/.config/zsh/plugins/zsh-sage ]]; then
 fi
 
 source ~/.config/zsh/plugins/zsh-sage/zsh-sage.plugin.zsh
+export ZSH_SAGE_AI_ENABLED=true
+
+# zsh-sage opens a persistent sqlite3 coprocess; silence zsh's "[n] pid"
+# job announcement while it starts up. Only restore `monitor` if it was on to
+# begin with — a shell with no controlling terminal cannot enable it, and
+# `setopt monitor` would error there.
+if [[ -o monitor ]]; then
+  unsetopt monitor
+  source ~/.config/zsh/plugins/zsh-sage/zsh-sage.plugin.zsh
+  setopt monitor
+else
+  source ~/.config/zsh/plugins/zsh-sage/zsh-sage.plugin.zsh
+fi
+
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias reload-shell="source ~/.config/zsh/.zshrc"
