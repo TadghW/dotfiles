@@ -10,6 +10,7 @@ Contains all of the configuration files I use to configure my computers' termina
  - Configuration folders for `alacritty` and `rio`
  - Configuration for the `tmux` terminal multiplexer
  - Configuration for the `neovim` text editor
+ - My global `CLAUDE.md` for Claude Code (linked to `~/.claude/CLAUDE.md`)
  - Scripts for deploying and removing the configuration
 
  When I'm working in a new unix-like environment I install `zsh`, `git`, `tmux`, `neovim`, and `rio` - then clone this repo and run `deploy-config.sh` - which deploys my configuration

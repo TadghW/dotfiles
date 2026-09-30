@@ -35,6 +35,7 @@ stash_if_exists(){
 
 stash_if_exists ~/.zshenv
 stash_if_exists ~/.gitconfig
+stash_if_exists ~/.claude/CLAUDE.md
 stash_if_exists ~/.config/zsh
 stash_if_exists ~/.config/rio
 stash_if_exists ~/.config/tmux
@@ -81,7 +82,12 @@ fi
 
 add_configuration "neovim" "nvim -v" "nvim:$HOME/.config/" 
 add_configuration "rio" "rio --version" "rio:$HOME/.config/" 
-add_configuration "alacritty" "alacritty --version" "alacritty:$HOME/.config/" 
+add_configuration "alacritty" "alacritty --version" "alacritty:$HOME/.config/"
+if claude --version 1>/dev/null 2>&1 && [[ ! -d ~/.claude ]]; then
+  echo "$HOME/.claude doesn't exist - creating..."
+  mkdir -p "$HOME/.claude" || err "Couldn't create ~/.claude"
+fi
+add_configuration "claude" "claude --version" "CLAUDE.md:$HOME/.claude/"
 
 echo "Done!"
 echo "Pre-existing config has been timestamped and left in ~/.config/old-config."
