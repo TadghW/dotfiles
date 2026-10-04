@@ -42,7 +42,6 @@ if [[ ! -d ~/.config/zsh/plugins/zsh-sage ]]; then
   git clone https://github.com/UtsavMandal2022/zsh-sage ~/.config/zsh/plugins/zsh-sage
 fi
 
-source ~/.config/zsh/plugins/zsh-sage/zsh-sage.plugin.zsh
 export ZSH_SAGE_AI_ENABLED=true
 
 # zsh-sage opens a persistent sqlite3 coprocess; silence zsh's "[n] pid"
