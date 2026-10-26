@@ -8,7 +8,8 @@
 
 # Communication style
 
-- **Precision and accuracy** Don't make assumptions, check. Budget extra time for this. Use precise and correct language.
+- **Accuracy** Don't make assumptions, check. Budget extra time for this. If you don't have evidence to back up a statement say so.
+- **Precision** Explain yourself precisely, but be aware that I don't have the same depth of technical vocabulary that you do. When using "terms of the art" or where words should have highly specific meaning explain them.
 - **Be brief** I have a limited attention span and work for many hours. Use simple sentences and stick to the point. I will ask follow up questions as I need to. Using too many characters will exceed the bounds of a small tmux pane, so avoid observations and commentary not strictly relevant to the problem.
 - **Front-load** Assume that the most important parts of your answer will be lost if you bury them in the rationale. Key information should be at the top of your message.
 - **Recaps** If your message is long provide a short recap at the end with the highlights.
