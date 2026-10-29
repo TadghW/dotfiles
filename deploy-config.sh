@@ -36,6 +36,11 @@ stash_if_exists(){
 stash_if_exists ~/.zshenv
 stash_if_exists ~/.gitconfig
 stash_if_exists ~/.claude/CLAUDE.md
+# stash only skills this repo provides - ~/.claude/skills may hold skills from elsewhere
+for skill in "$(dirname "$0")"/claude-skills/*/; do
+  [[ -d "$skill" ]] || continue
+  stash_if_exists "$HOME/.claude/skills/$(basename "$skill")"
+done
 stash_if_exists ~/.config/zsh
 stash_if_exists ~/.config/rio
 stash_if_exists ~/.config/tmux
@@ -83,11 +88,16 @@ fi
 add_configuration "neovim" "nvim -v" "nvim:$HOME/.config/" 
 add_configuration "rio" "rio --version" "rio:$HOME/.config/" 
 add_configuration "alacritty" "alacritty --version" "alacritty:$HOME/.config/"
-if claude --version 1>/dev/null 2>&1 && [[ ! -d ~/.claude ]]; then
-  echo "$HOME/.claude doesn't exist - creating..."
-  mkdir -p "$HOME/.claude" || err "Couldn't create ~/.claude"
+if claude --version 1>/dev/null 2>&1 && [[ ! -d ~/.claude/skills ]]; then
+  echo "$HOME/.claude/skills doesn't exist - creating..."
+  mkdir -p "$HOME/.claude/skills" || err "Couldn't create ~/.claude/skills"
 fi
-add_configuration "claude" "claude --version" "CLAUDE.md:$HOME/.claude/"
+skill_pairs=()
+for skill in claude-skills/*/; do
+  [[ -d "$skill" ]] || continue
+  skill_pairs+=("${skill%/}:$HOME/.claude/skills/")
+done
+add_configuration "claude" "claude --version" "CLAUDE.md:$HOME/.claude/" "${skill_pairs[@]}"
 
 echo "Done!"
 echo "Pre-existing config has been timestamped and left in ~/.config/old-config."
